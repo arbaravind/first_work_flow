@@ -18,7 +18,7 @@ on:
 
   # Scheduled trigger at 5:00 AM UTC, Monday through Friday
   #schedule:
-   # - cron: '0 5 * * 1-5'
+    #- cron: '0 5 * * 1-5'
 
 # Jobs defined in the workflow
 jobs:
@@ -65,7 +65,7 @@ jobs:
 
       - name: Print a message for non-main branches
         if: github.ref != 'refs/heads/main'
-        run: echo "This is not the main branch. okay?"
+        run: echo "This is not the main branch."
 
       - name: Run tests
         run: npm test
@@ -79,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish test results
-        uses: actions/upload-artifact@v3.1.3
+        uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: test-results.xml
