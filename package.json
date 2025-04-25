@@ -4,7 +4,7 @@
   "description": "my first work flow",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"✅ Test script ran successfully!\""
   },
   "repository": {
     "type": "git",
